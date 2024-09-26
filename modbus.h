@@ -1,12 +1,13 @@
 /**
 Modbus slave implementation for STM32 HAL under FreeRTOS.
 (c) 2017 Viacheslav Kaloshin, multik@multik.org
-Licensed under LGPL. 
+Licensed under LGPL.
 **/
 #ifndef __modbus_H
 #define __modbus_H
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 #include "cmsis_os.h"
 // 3,5 character timeout or frame timeout
@@ -23,7 +24,7 @@ extern "C" {
    // set our address
    void ModBus_SetAddress(uint8_t addr);
    // set value of register
-   void ModBus_SetRegister(uint8_t reg,uint16_t value);
+   void ModBus_SetRegister(uint8_t reg, uint16_t value);
    // grab value of register
    uint16_t ModBus_GetRegister(uint8_t reg);
 #ifdef __cplusplus
